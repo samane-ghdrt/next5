@@ -10,4 +10,8 @@ export const POST = async (request) => {
   const newAdmin = response.json();
   return Response.json({ msg: "" });
 };
-export const GET = async () => {};
+export const GET = async () => {
+  const admin = await fetch("");
+  const response = await admin.json();
+  return Response.json(response);
+};
